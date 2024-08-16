@@ -1,0 +1,519 @@
+.body {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0;
+}
+
+.header {
+    top: 0; /* Fija el encabezado en la parte superior de la ventana */
+    left: 0; /* Fija el encabezado a la izquierda de la ventana */
+    width: 100%; /* Ancho completo del encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté en la parte superior del apilamiento */
+    background-color: #fff; /* Cambia el color de fondo si es necesario */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra si deseas */
+}
+.header h5 {
+    place-items: center; /* Centra los elementos dentro del encabezado */
+    background-color: rgb(197, 0, 0); /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding-block: 4px; /* Espacio de relleno en bloque superior e inferior */
+    text-align: center;
+}
+
+.head {
+    display: flex; /* Usa un contenedor flexible para los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto en el encabezado */
+    background-color: red; /* Color de fondo rojo */
+    height: 60px; /* Altura del encabezado */
+    color: white; /* Color del texto blanco */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 20px; /* Espacio de relleno alrededor del encabezado */
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
+.head img{
+    width: 10rem;
+    height: 5rem;
+    margin-top: 13px;
+}
+
+.input-group {
+    height: 40px; /* Altura del grupo de entrada */
+    width: 500px; /* Ancho del grupo de entrada */
+}
+
+.form-control {
+    height: 40px; /* Altura del control de formulario */
+}
+
+.nav-head {
+    color: white; /* Color del texto blanco */
+    font-size: 19px; /* Tamaño de fuente del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+}
+
+.cart-toggle {
+    display: none; /* Ocultamos el input checkbox */
+}
+
+.cart-button {
+    z-index: 9999; /* Aseguramos que el botón esté sobre otros elementos */
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    color: white; /* Color del texto blanco */
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Ajustamos la posición inicial del panel */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999; /* Aseguramos que el panel esté sobre otros elementos */
+    padding: 20px 10px;
+    overflow-y: auto; /* Agregamos un scroll vertical si el contenido excede la altura del panel */
+}
+
+.close-button {
+    display: none; /* Ocultamos el botón de cierre por defecto */
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-icon, .cart-toggle {
+    color: white; /* Color del texto blanco */
+    font-size: 1.8rem; /* Tamaño de fuente del icono */
+    padding: 8px; /* Espacio de relleno alrededor del icono */
+}
+
+.cart-toggle:checked + .cart-button + .cart-panel {
+    right: 0; /* Mostramos el panel cuando el checkbox está chequeado */
+}
+
+.cart-toggle:checked + .cart-button + .cart-panel .close-button {
+    display: block; /* Mostramos el botón de cierre cuando el panel está abierto */
+}
+
+.nav-login {
+    color: white; /* Color del texto blanco */
+    font-size: 1.8rem; /* Tamaño de fuente del texto */
+    background-color: red; /* Color de fondo rojo */
+    border: 0; /* Sin borde */
+}
+
+.btn-dropdown-login{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .head {
+        padding: 10px; /* Reducir el padding general */
+    }
+
+    .head img{
+        width: 10rem;
+        height: 5rem;
+        margin: 13px 0 0px 10px;
+    
+    }
+
+    .input-group {
+        max-width: 180px; /* Reducir el ancho máximo de la barra de búsqueda */
+        margin: 0;
+    }
+    
+    .navbar {
+        max-width: 180px; /* Reducir aún más el ancho de la barra de navegación */
+    }
+
+    .form-control {
+        max-width: 100px; /* Reducir el ancho máximo del input de búsqueda */
+    }
+
+    .vr {
+        display: none; /* Oculta las líneas verticales en dispositivos móviles */
+    }
+
+    .cart-panel {
+        width: 100%; /* Ancho completo para el panel del carrito */
+        max-width: 300px; /* Ancho máximo para el panel del carrito */
+        right: -100%; /* Oculta el panel del carrito fuera de la pantalla */
+        transition: right 0.3s ease;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .dropdown-login {
+        margin-top: 10px; /* Espacio superior entre los íconos y el inicio de sesión */
+    }
+    .nav-icon {
+        display: none; /* Oculta el ícono del camión en dispositivos móviles */
+    }
+
+    .nav-head{
+        display: none;
+    }
+}
+
+.menu {
+    background-color: red;
+    height: 60px; /* Altura del menú */
+    color: white; /* Color del texto blanco */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 20px; /* Espacio de relleno alrededor del menú */
+    display: flex; /* Usa un contenedor flexible para los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    border-top: 0.5px solid; /* Borde superior delgado */
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius:0%;
+}
+
+.dropdown-menu a {
+    position: relative;
+    color: black;
+    padding: 0 80px 0 0; 
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    text-align: left;
+    font-size: 13px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    color: rgb(0, 0, 0); /* Color del texto */
+    margin: 8px; /* Margen exterior del elemento */
+    font-size: 15px; /* Tamaño de fuente del texto */
+    font-weight: 500; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+}
+
+.link-menu {
+    color: white; /* Color del texto blanco */
+    font-size: 17px; /* Tamaño de fuente del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+    margin: 55px;
+
+    /* Efecto hover */
+    &:hover {
+        color: yellow; /* Cambia el color del texto al pasar el cursor sobre el enlace */
+    }
+}
+
+
+
+
+
+
+
+
+.product-container {
+    display: flex;
+    background: white;
+    padding: 20px;
+    margin: 50px 0 50px 0;
+}
+
+.product-image img {
+    width: 600px;
+    height: 600px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 80px ;
+}
+
+.product-details {
+    max-width: 500px;
+}
+
+.product-details h1 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.product-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.price .discounted-price {
+    color: red;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.price .discount {
+    background: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.quantity button {
+    width: 40px;
+    height: 40px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.metodos-pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 150px;
+    margin-top: 30px;
+}
+
+.metodos-pago img{
+    height: 30px;
+    margin: 4px;
+    width: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .original-price, .discounted-price, .discount {
+        margin-right: 0;
+        margin-bottom: 5px;
+        margin: 5px;
+    }
+
+    .metodos-pago a {
+        margin: 5px;
+    }
+
+    .metodos-pago img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+footer {
+    background-color: #f9f9f9;
+    text-align: initial; 
+    margin-top: 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-head-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    
+}
+.footer-head {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+.footer-head img {
+    margin-top: 20px;
+    height: 90px;
+    width: 150px;
+}
+.footer-head h2 {
+    margin: 0;
+    margin: 0 20px 0 50px;
+    font-size: 14px;
+    
+}
+.footer-head input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 12px;
+    width: 300px;
+}
+.footer-head button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer-section {
+    margin: 20px 45px;
+}
+.footer-section h2 {
+    color: #ff0000;
+    margin-bottom: 25px;
+    font-size: 25px;
+
+}
+.footer-section p, .footer-section a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.footer-icons img {
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 13px;
+}
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+.footer-payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 150px;
+}
+.footer-payment-methods img {
+    height: 30px;
+    margin: 4px;
+    width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+        gap: 20px; /* Espacio entre elementos en dispositivos móviles */
+    }
+
+    .footer-head {
+        flex-direction: column; /* Apilar elementos en el encabezado */
+    }
+
+    .footer-head img {
+        margin-top: 10px; /* Reducir margen superior de la imagen */
+        width: 70%; /* Ancho máximo para la imagen */
+        max-width: 200px; /* Ancho máximo absoluto para la imagen */
+    }
+
+    .footer-head h2 {
+        font-size: 16px; /* Tamaño de fuente reducido */
+        margin: 10px 0; /* Márgenes ajustados */
+    }
+
+    .footer-head input {
+        width: 100%; /* Ancho completo para el campo de entrada */
+        max-width: 300px; /* Ancho máximo absoluto para el campo de entrada */
+    }
+
+    .footer-head button {
+        width: 100%; /* Ancho completo para el botón */
+        max-width: 150px; /* Ancho máximo absoluto para el botón */
+        margin-top: 10px; /* Espacio superior para separar el botón */
+    }
+
+    .footer-section {
+        margin: 10px; /* Márgenes internos reducidos para secciones */
+    }
+
+    .footer-section h2 {
+        font-size: 20px; /* Tamaño de fuente reducido */
+        margin-bottom: 15px; /* Espacio inferior ajustado */
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 14px; /* Tamaño de fuente reducido */
+    }
+
+    .footer-payment-methods img {
+        width: 25%; /* Ancho máximo para las imágenes */
+        max-width: 50px; /* Ancho máximo absoluto para las imágenes */
+    }
+}

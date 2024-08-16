@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Higo Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="body">
+    <!------------PRINCIPIO MENU-------------->
+    <header class="header">
+        <h5 class="mb-0 fs-6">AHORA HAS TU PEDIDO Y RECIBELO EN HORAS</h5>
+        <div class="head">
+            <!--PRINCIPIO BARRA DE BUSQUEDA-->
+            <a href="/"><img src="./img/higo-removebg-preview 1.png" alt="Logo Higo"></a>
+            <nav class="navbar">
+                <form class="container-fluid">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="¿Que estas buscando?"
+                            aria-label="¿Que estas buscando?">
+                        <button class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+            </nav>
+            <!--FIN BARRA DE BUSQUEDA-->
+
+            <!--Iconos-->
+            <a class="nav-head" href="#" data-toggle="modal" data-target="#exampleModal"><i class="bi bi-geo-alt-fill"></i> Donde quieres recibir tu producto?</a>
+        
+            <div class="vr"></div>
+
+            <input type="checkbox" id="cartToggle" class="cart-toggle">
+            <label for="cartToggle" class="cart-button">
+                <i class="bi bi-cart"></i> <!-- Ícono del carrito -->
+            </label>
+            <div class="cart-panel" id="cartPanel">
+                <label for="cartToggle" class="close-button"><i class="bi bi-x-lg"></i></label> <!-- Botón de cerrar -->
+                <!-- Contenido del panel del carrito -->
+                <h2 style="color: black;">Carrito</h2>
+                <div class="position-absolute top-50 start-50 translate-middle" style="color: black;">
+                    <img src="img/carrito de compras.png" alt="" style="width: 80% ; height: 80%;">
+                    <p>su carrito esta vacio</p>
+                </div>
+            </div>
+            
+            <div class="vr"></div>
+            <a class="nav-icon" href="#"><i class="bi bi-truck"></i></a> <!--CAMION-->
+            <div class="vr"></div>
+            <!--Iconos-->
+
+            <!--PRINCIPIO INICIO DE SESION DESPLEGABLE-->
+            <div class="dropdown-login">
+                <button type="button" class="nav-login" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-fill"></i>
+                </button>
+                <form class="dropdown-menu p-4" style="width: 300px;">
+                    <div class="mb-3">
+                        <h4><label>Iniciar Sesión</label></h4>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                            placeholder="correo electronico">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                            placeholder="contraseña">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Recuerdame
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-dropdown-login">Entrar</button>
+                </form>
+            </div>
+            <!--FIN INICIO DE SESION DESPLEGABLE-->
+        </div>
+
+        <nav class="menu">
+            <!--PRINCIPIO MENU DESPLEGABLE-->
+            <a class="nav-icon" href="#" data-bs-toggle="dropdown">
+                <i class="bi bi-list"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-start">
+                <li><a href="#" class="dropdown-link">Abarrotes</a></li>
+                <li><a href="#" class="dropdown-link">Bebidas y snack</a></li>
+                <li><a href="#" class="dropdown-link">Cerveza, Vinos y Licores</a></li>
+                <li><a href="#" class="dropdown-link">Bebés</a></li>
+                <li><a href="#" class="dropdown-link">Lacteos</a></li>
+                <li><a href="#" class="dropdown-link">Cuidado Personal</a></li>
+                <li><a href="#" class="dropdown-link">LIMPIEZA</a></li>
+            </ul>
+            <!--FIN MENU DESPLEGABLE-->
+
+            <!--PRINCIPIO MENU PRINCIPAL-->
+            <a class="link-menu" href="./menu/ofertas.html">Ofertas</a>
+            <a class="link-menu" href="./menu/productos.html">Productos</a>
+            <a class="link-menu" href="./Categorias/abarrotes.html">Abarrotes</a>
+            <a class="link-menu" href="./Categorias/licores.html">Licores</a>
+            <a class="link-menu" href="./menu/mascotas.html">Mascotas</a>
+            <a class="link-menu" href="#">Nuestras Tiendas</a>
+            <a class="link-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ¿Necesitas ayuda?
+            </a>
+            <ul class="dropdown-menu" style="padding: 10px;">
+                <li><a class="dropdown-item" href="./menu/devoluciones.html">CAMBIOS Y DEVOLUCIONES</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="#">NUESTRAS TIENDAS</a></li>
+            </ul>
+            <!--FIN MENU PRINCIPAL-->
+        </nav>
+    </header>
+    <!------------FIN MENU-------------->
+
+    <!--PRINCIPIO CARRUSEL DE IMAGENES-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active position-relative bg-secondary" data-bs-interval="2000">
+                <img src="./img/fondo.png" class="img--bg-carousel" alt="...">
+                <div class="d-flex justify-content-end align-items-center gap-4 flex-md-row py-5 me-4">
+                    <div class="card" style="width: 16rem; margin-left: 20px;">
+                        <a href="#"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Don Vittorio</h6>
+                            <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                            <a href="#" class="btn btn-white">Precio web: S/22.80</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Florida</h6>
+                            <p class="card-text">Filete de Atún en Aceite Vegetal Lata Pack 6 de 140g</p>
+                            <a href="#" class="btn btn-white">Precio web: S/33.20</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/Primor.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Primor</h6>
+                            <p class="card-text">Aceite Vegetal PRIMOR Pack 2 Botella 900ml</p>
+                            <a href="#" class="btn btn-white">Precio web: S/18.20</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------------------------------------------->
+            <div class="carousel-item position-relative bg-secondary" data-bs-interval="2000">
+                <img src="img/fondo.png" class="img--bg-carousel" alt="...">
+                <div class="d-flex justify-content-end align-items-center gap-4 flex-md-row py-5 me-4">
+                    <div class="card" style="width: 16rem; margin-left: 20px;">
+                        <a href="#"><img src="img/Inca Kola.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Inca Kola</h6>
+                            <p class="card-text">3L pack de 3 INCA KOLA + COCA COLA + FANTA</p>
+                            <a href="#" class="btn btn-white">Precio web: S/25.90</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/Volt.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Volt</h6>
+                            <p class="card-text">Bebida Energizante VOLT Dark Paquete 12u Botella 300ml</p>
+                            <a href="#" class="btn btn-white">Precio web: S/18.20</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/coca cola 600ml.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Coca Cola</h6>
+                            <p class="card-text">Gaseosa COCA COLA Botella 600ml Pack 12 Und
+                            </p>
+                            <a href="#" class="btn btn-white">Precio web: S/28.90</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------->
+            <div class="carousel-item position-relative bg-secondary" data-bs-interval="2000">
+                <img src="./img/fondo.png" class="img--bg-carousel" alt="...">
+                <div class="d-flex justify-content-end align-items-center gap-4 flex-md-row py-5 me-4">
+                    <div class="card" style="width: 16rem; margin-left: 20px;">
+                        <a href="#"><img src="img/Corona.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Corona</h6>
+                            <p class="card-text">Cerveza CORONA Botella 330ml Paquete 6u</p>
+                            <a href="#" class="btn btn-white">Precio web: S/25.90</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/Pilsen.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Pilsen</h6>
+                            <p class="card-text">Cerveza PILSEN Pack 6 Lata Extra 473ml</p>
+                            <a href="#" class="btn btn-white">Precio web: S/23.50</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 16rem;">
+                        <a href="#"><img src="img/Ron Cartavio.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <h6 class="card-title">Ron Cartavio</h6>
+                            <p class="card-text">Ron Cartavio Black Barrel 3 Años Botella 750ml</p>
+                            <a href="#" class="btn btn-white">Precio web: S/28.90</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FIN CARRUSEL DE IMAGENES-->
+
+    <div class="head-categorias">
+        <h1>Nuestras Categorias</h1>
+    </div>
+    <div class="card-categorias" style="margin-top: 20px;">
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/lacteos.html"><img src="img/Leche_Gloria-removebg-preview.png" alt="Imagen 1" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/lacteos.html"><button class="boton-categorias">Lacteos</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/gaseosas.html"><img src="img/Coca e inca.png" alt="Imagen 2" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/gaseosas.html"><button class="boton-categorias">Gaseosas</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/ph.html"><img src="img/Papel Suave.png" alt="Imagen 3" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/ph.html"><button class="boton-categorias">Papel Higienico</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/galletas.html"><img src="img/Vainilla.png" alt="Imagen 4" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/galletas.html"><button class="boton-categorias">Galletas</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/licores.html"><img src="img/Vino.png" alt="Imagen 5" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/licores.html"><button class="boton-categorias">Licores</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href=""><img src="img/Coca e inca.png" alt="Imagen 2" class="centered-image"></a>
+            </div>
+            <a href=""><button class="boton-categorias">Gaseosas</button></a>
+        </div>
+    </div>
+    <div class="card-categorias2">
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/abarrotes.html"><img src="img/Aceite.png" alt="Imagen 6" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/abarrotes.html"><button class="boton-categorias">Abarrotes</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/cuidadop.html"><img src="img/Shampo.png" alt="Imagen 7" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/cuidadop.html"><button class="boton-categorias">Cuidado Personal</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/limpieza.html"><img src="img/Ayudin.png" alt="Imagen 8" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/limpieza.html"><button class="boton-categorias">Limpieza</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/bebes.html"><img src="img/Pañal.png" alt="Imagen 9" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/bebes.html"><button class="boton-categorias">Bebés</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href="./Categorias/mascotas.html"><img src="img/ricocan.png" alt="Imagen 10" class="centered-image"></a>
+            </div>
+            <a href="./Categorias/mascotas.html"><button class="boton-categorias">Mascotas</button></a>
+        </div>
+        <div class="card-categoria">
+            <div class="image-container">
+                <a href=""><img src="img/Coca e inca.png" alt="Imagen 2" class="centered-image"></a>
+            </div>
+            <a href=""><button class="boton-categorias">Gaseosas</button></a>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <div class="label">
+            ABARROTES
+        </div>
+        <div class="bar"></div>
+        <div class="arrows">
+            <div class="arrow left" data-bs-target="#cardCarousel" data-bs-slide="prev">&lt;</div>
+            <div class="arrow right" data-bs-target="#cardCarousel" data-bs-slide="next">&gt;</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="cardCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/primor.html"><img src="img/primor b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Primor</h6>
+                                <p class="card-text">Aceite Vegetal PRIMOR Clásico Botella 900L</p>
+                                <a href="./producto-abarrote/primor.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/florida.html"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Florida</h6>
+                                <p class="card-text">Filete de Atún FLORIDA en Aceite Vegetal Lata Pack 6 lata 140g
+                                </p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/don-vittorio.html"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Don Vittorio</h6>
+                                <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                                <a href="./producto-abarrote/don-vittorio.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/costeño.html"><img src="img/costeño.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Costeño</h6>
+                                <p class="card-text">Arroz Elaborado Costeño Extra - Bolsa de 5Kg</p>
+                                <a href="./producto-abarrote/costeño.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/valle-norte.html"><img src="img/valle norte.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Valle Norte</h6>
+                                <p class="card-text">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</p>
+                                <a href="./producto-abarrote/valle-norte.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/"><img src="img/primor b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Primor</h6>
+                                <p class="card-text">Aceite Vegetal PRIMOR Clásico Botella 900L</p>
+                                <a href="./producto-abarrote/"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Florida</h6>
+                                <p class="card-text">Filete de Atún FLORIDA en Aceite Vegetal Lata Pack 6 lata 140g</p>
+                                <a href="./producto-abarrote/"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Don Vittorio</h6>
+                                <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                                <a href="./producto-abarrote/"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/"><img src="img/costeño.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Costeño</h6>
+                                <p class="card-text">Arroz Elaborado Costeño Extra - Bolsa de 5Kg</p>
+                                <a href="./producto-abarrote/"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-abarrote/"><img src="img/valle norte.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Valle Norte</h6>
+                                <p class="card-text">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</p>
+                                <a href="./producto-abarrote/"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tamaño">
+        <a href=""><img src="img/Categoria1.png" alt=""></a>
+    </div>
+
+    <div class="menu-bar">
+        <div class="label">
+            BEBIDAS
+        </div>
+        <div class="bar"></div>
+        <div class="arrows">
+            <div class="arrow left" data-bs-target="#cardCarousel1" data-bs-slide="prev">&lt;</div>
+            <div class="arrow right" data-bs-target="#cardCarousel1" data-bs-slide="next">&gt;</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="cardCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-bebidas/cielo.html"><img src="img/cielo caja.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Cielo</h6>
+                                <p class="card-text">Agua natural CIELO en Caja de 20 litros.</p>
+                                <a href="./producto-bebidas/cielo.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-bebidas/san-luis.html"><img src="img/san luis caja.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">San Luis</h6>
+                                <p class="card-text">Agua natural SAN LUIS en caja de 20 litros.</p>
+                                <a href="./producto-bebidas/san-luis.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-bebidas/inca-kola.html"><img src="img/inca kola 3L.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Inca Kola</h6>
+                                <p class="card-text">Gaseosa INCA KOLA Botella 3L Paquete 4u</p>
+                                <a href="./producto-bebidas/inca-kola.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-bebidas/coca-cola.html"><img src="img/coca cola 3L.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Coca Cola</h6>
+                                <p class="card-text">Gaseosa COCA COLA Botella 3L Paquete 4u</p>
+                                <a href="./producto-bebidas/coca-cola.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-bebidas/monster.html"><img src="img/monster.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Monster</h6>
+                                <p class="card-text">Bebida Energizante MONSTER Ultra Lata 473ml x 2u</p>
+                                <a href="./producto-bebidas/monster.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/primor b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Primor</h6>
+                                <p class="card-text">Aceite Vegetal PRIMOR Clásico Botella 900L</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Florida</h6>
+                                <p class="card-text">Filete de Atún FLORIDA en Aceite Vegetal Lata Pack 6 lata 140g</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Don Vittorio</h6>
+                                <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/costeño.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Costeño</h6>
+                                <p class="card-text">Arroz Elaborado Costeño Extra - Bolsa de 5Kg</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/valle norte.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Valle Norte</h6>
+                                <p class="card-text">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tamaño">
+        <a href=""><img src="img/Categoria2.png" alt=""></a>
+    </div>
+
+    <div class="menu-bar">
+        <div class="label">
+            LIMPIEZA
+        </div>
+        <div class="bar"></div>
+        <div class="arrows">
+            <div class="arrow left" data-bs-target="#cardCarousel2" data-bs-slide="prev">&lt;</div>
+            <div class="arrow right" data-bs-target="#cardCarousel2" data-bs-slide="next">&gt;</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="cardCarousel2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-limpieza/paracas.html"><img src="img/Paracas.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Paracas</h6>
+                                <p class="card-text">Papel Higiénico PARACAS Gold Negro Doble Hoja Paquete 4un 6 pack</p>
+                                <a href="./producto-limpieza/paracas.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-limpieza/downy.html"><img src="img/downy.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Downy</h6>
+                                <p class="card-text">Suavizante DOWNY Aroma Floral Galonera 4.8Lt</p>
+                                <a href="./producto-limpieza/downy.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-limpieza/marsella.html"><img src="img/marsella.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Marsella</h6>
+                                <p class="card-text">Detergente en Polvo MARSELLA Petalos Relajantes Bolsa 2Kg</p>
+                                <a href="./producto-limpieza/marsella.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-limpieza/poett.html"><img src="img/poett b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Poett</h6>
+                                <p class="card-text">Limpiador POETT Frescura de Lavanda Botella 3.8L</p>
+                                <a href="./producto-limpieza/poett.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-limpieza/sapolio.html"><img src="img/sapolio liquido.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Sapolio</h6>
+                                <p class="card-text">Lavavajilla Líquido SAPOLIO Limón Botella 750 ml</p>
+                                <a href="./producto-limpieza/sapolio.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/primor b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Primor</h6>
+                                <p class="card-text">Aceite Vegetal PRIMOR Clásico Botella 900L</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Florida</h6>
+                                <p class="card-text">Filete de Atún FLORIDA en Aceite Vegetal Lata Pack 6 lata 140g
+                                </p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Don Vittorio</h6>
+                                <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/costeño.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Costeño</h6>
+                                <p class="card-text">Arroz Elaborado Costeño Extra - Bolsa de 5Kg</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/valle norte.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Valle Norte</h6>
+                                <p class="card-text">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</p>
+                                <a href="./producto-abarrote/florida.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tamaño">
+        <a href=""><img src="img/Categoria3.png" alt=""></a>
+    </div>
+
+    <div class="menu-bar">
+        <div class="label">
+            MASCOTAS
+        </div>
+        <div class="bar"></div>
+        <div class="arrows">
+            <div class="arrow left" data-bs-target="#cardCarousel3" data-bs-slide="prev">&lt;</div>
+            <div class="arrow right" data-bs-target="#cardCarousel3" data-bs-slide="next">&gt;</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="cardCarousel3" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-mascotas/ricocan1.html"><img src="img/ricocan.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Ricocan</h6>
+                                <p class="card-text">Comida para perros adultos razas medianas y grandes bolsa de 22kg</p>
+                                <a href="./producto-mascotas/ricocan1.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-mascotas/ricocan2.html"><img src="img/ricocan b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Ricocan</h6>
+                                <p class="card-text">Comida Para Perros Adultos Pequeños Cordero y Cereal Bolsa 22Kg</p>
+                                <a href="./producto-mascotas/ricocan2.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-mascotas/ricocat.html"><img src="img/ricocat.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Ricocat</h6>
+                                <p class="card-text">Comida para Gatos Adultos Festival de Sabores Bolsa 15kg</p>
+                                <a href="./producto-mascotas/ricocat.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-mascotas/mimaskot.html"><img src="img/mimaskot.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Mimaskot</h6>
+                                <p class="card-text">Comida para perros Sabor Carne Cereales Vegetales Bolsa 25kg</p>
+                                <a href="./producto-mascotas/mimaskot.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="./producto-mascotas/michicat.html"><img src="img/michicat.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Michicat</h6>
+                                <p class="card-text">Comida para Gatos Adulto Sabor a Pollo y Sardina Saco 18K</p>
+                                <a href="./producto-mascotas/michicat.html"><button class="btn">AGREGAR AL CARRITO</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/primor b.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Primor</h6>
+                                <p class="card-text">Aceite Vegetal PRIMOR Clásico Botella 900L</p>
+                                <button class="btn">AGREGAR AL CARRITO</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Florida.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Florida</h6>
+                                <p class="card-text">Filete de Atún FLORIDA en Aceite Vegetal Lata Pack 6 lata 140g
+                                </p>
+                                <button class="btn">AGREGAR AL CARRITO</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/Don Vittorio.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Don Vittorio</h6>
+                                <p class="card-text">Fideos Spaghetti DON VITTORIO Pack 6u Bolsa 450g</p>
+                                <button class="btn">AGREGAR AL CARRITO</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/costeño.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Costeño</h6>
+                                <p class="card-text">Arroz Elaborado Costeño Extra - Bolsa de 5Kg</p>
+                                <button class="btn">AGREGAR AL CARRITO</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 16rem; height: 23rem;">
+                            <a href="#"><img src="img/valle norte.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h6 class="card-title">Valle Norte</h6>
+                                <p class="card-text">Arroz Extra VALLENORTE Gran Reserva Bolsa 5Kg</p>
+                                <button class="btn">AGREGAR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tamaño">
+        <a href=""><img src="img/Categoria4.png" alt=""></a>
+    </div>
+
+
+    <footer>
+        <div class="footer-head-container">
+            <div class="footer-head">
+                <img src="img/higo-removebg-preview 1.png" alt="Higo Super Market">
+                <h2>¡Entérate de promociones especiales que tenemos para ti!</h2>
+                <input type="email" placeholder="Escribe tu correo electrónico aquí">
+                <button>Enviar</button>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Contáctanos</h2>
+                <p>+51 970 405 500</p>
+                <p><a href="mailto:atencionalcliente@corporacionhigo.pe">atencionalcliente@corporacionhigo.pe</a>
+                </p>
+                <p>HORARIO CALL CENTER:<br>De lunes a viernes de 8:30am - 6:30pm</p>
+                <div class="footer-icons">
+                    <a href=""><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href=""><img src="img/instagram.png" alt="Instagram"></a>
+                </div>
+                <h4>Métodos de pago</h4>
+                <div class="footer-payment-methods">
+                    <img src="img/yape.png" alt="Yape">
+                    <img src="img/visa.png" alt="Visa">
+                    <img src="img/mastercard.png" alt="MasterCard">
+                    <img src="img/plin.png" alt="Plin">
+                    <img src="img/bcp.png" alt="BCP">
+                    <img src="img/efectivo.png" alt="PagoEfectivo">
+                </div>
+                <p>Compra 100% segura</p>
+            </div>
+            <div class="footer-section">
+                <h2>Nosotros</h2>
+                <p><a href="./nosotros/nosotros.html">¿Quiénes Somos?</a></p>
+                <p><a href="#">Nuestra Tienda Física</a></p>
+            </div>
+            <div class="footer-section">
+                <h2>Tienda Online</h2>
+                <p><a href="./tienda-online/terminos.html">Términos y condiciones</a></p>
+                <p><a href="#">Tutorial de compra</a></p>
+                <p><a href="./tienda-online/modalidad.html">Modalidad de compra</a></p>
+            </div>
+            <div class="footer-section">
+                <h2>Servicio al cliente</h2>
+                <p><a href="./menu/devoluciones.html">Cambios y Devoluciones</a></p>
+                <p><a href="./servicio-cliente/privacidad.html">Política de privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+    <a href=""><img src="img/wsp.png" class="imagen-fija" alt="Imagen Fija"></a>
+    
+</body>
+
+</html>

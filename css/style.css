@@ -1,0 +1,654 @@
+.body {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0;
+    text-align: center; /* Centra el texto y otros elementos en el cuerpo */
+    place-items: center; /* Centra los elementos dentro del cuerpo */
+}
+
+.header {
+    position: fixed; /* Fija el encabezado en su posición, independientemente del desplazamiento de la página */
+    top: 0; /* Fija el encabezado en la parte superior de la ventana */
+    left: 0; /* Fija el encabezado a la izquierda de la ventana */
+    width: 100%; /* Ancho completo del encabezado */
+    z-index: 1000; /* Asegura que el encabezado esté en la parte superior del apilamiento */
+    background-color: #fff; /* Cambia el color de fondo si es necesario */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra si deseas */
+}
+
+.header h5 {
+    background-color: rgb(197, 0, 0); /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding-block: 4px; /* Espacio de relleno en bloque superior e inferior */
+}
+
+.head {
+    display: flex; /* Usa un contenedor flexible para los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto en el encabezado */
+    background-color: #ff0000; /* Color de fondo rojo */
+    height: 60px; /* Altura del encabezado */
+    color: #ffffff; /* Color del texto blanco */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 20px; /* Espacio de relleno alrededor del encabezado */
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
+
+
+.head img{
+    width: 10rem;
+    height: 5rem;
+    margin-top: 13px;
+}
+
+.input-group {
+    height: 40px; /* Altura del grupo de entrada */
+    width: 500px; /* Ancho del grupo de entrada */
+}
+
+.form-control {
+    height: 40px; /* Altura del control de formulario */
+}
+
+.nav-head {
+    color: white; /* Color del texto blanco */
+    font-size: 19px; /* Tamaño de fuente del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+}
+
+.cart-toggle {
+    display: none; /* Ocultamos el input checkbox */
+}
+
+.cart-button {
+    z-index: 9999; /* Aseguramos que el botón esté sobre otros elementos */
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    color: white; /* Color del texto blanco */
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Ajustamos la posición inicial del panel */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999; /* Aseguramos que el panel esté sobre otros elementos */
+    padding: 20px 10px;
+    overflow-y: auto; /* Agregamos un scroll vertical si el contenido excede la altura del panel */
+}
+
+.close-button {
+    display: none; /* Ocultamos el botón de cierre por defecto */
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-icon, .cart-toggle {
+    color: white; /* Color del texto blanco */
+    font-size: 1.8rem; /* Tamaño de fuente del icono */
+    padding: 8px; /* Espacio de relleno alrededor del icono */
+}
+
+.cart-toggle:checked + .cart-button + .cart-panel {
+    right: 0; /* Mostramos el panel cuando el checkbox está chequeado */
+}
+
+.cart-toggle:checked + .cart-button + .cart-panel .close-button {
+    display: block; /* Mostramos el botón de cierre cuando el panel está abierto */
+}
+
+.nav-login {
+    color: white; /* Color del texto blanco */
+    font-size: 1.8rem; /* Tamaño de fuente del texto */
+    background-color: red; /* Color de fondo rojo */
+    border: 0; /* Sin borde */
+}
+
+.btn-dropdown-login{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .head {
+        padding: 10px; /* Reducir el padding general */
+    }
+
+    .head img{
+        width: 10rem;
+        height: 5rem;
+        margin: 13px 0 0px 10px;
+    
+    }
+
+    .input-group {
+        max-width: 180px; /* Reducir el ancho máximo de la barra de búsqueda */
+        margin: 0;
+    }
+    
+    .navbar {
+        max-width: 180px; /* Reducir aún más el ancho de la barra de navegación */
+    }
+
+    .form-control {
+        max-width: 100px; /* Reducir el ancho máximo del input de búsqueda */
+    }
+
+    .vr {
+        display: none; /* Oculta las líneas verticales en dispositivos móviles */
+    }
+
+    .cart-panel {
+        width: 100%; /* Ancho completo para el panel del carrito */
+        max-width: 300px; /* Ancho máximo para el panel del carrito */
+        right: -100%; /* Oculta el panel del carrito fuera de la pantalla */
+        transition: right 0.3s ease;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .dropdown-login {
+        margin-top: 10px; /* Espacio superior entre los íconos y el inicio de sesión */
+    }
+    .nav-icon {
+        display: none; /* Oculta el ícono del camión en dispositivos móviles */
+    }
+
+    .nav-head{
+        display: none;
+    }
+}
+
+
+.menu {
+    background-color: red;
+    height: 60px; /* Altura del menú */
+    color: white; /* Color del texto blanco */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 20px; /* Espacio de relleno alrededor del menú */
+    display: flex; /* Usa un contenedor flexible para los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    border-top: 0.5px solid; /* Borde superior delgado */
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius:0%;
+}
+
+.dropdown-menu a {
+    position: relative;
+    color: black;
+    padding: 0 20px 0 0; 
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    text-align: left;
+    font-size: 13px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    color: rgb(0, 0, 0); /* Color del texto */
+    margin: 8px; /* Margen exterior del elemento */
+    font-size: 15px; /* Tamaño de fuente del texto */
+    font-weight: 500; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+}
+
+.link-menu {
+    color: white; /* Color del texto blanco */
+    font-size: 17px; /* Tamaño de fuente del texto */
+    font-weight: 600; /* Grosor de la fuente */
+    text-decoration: none; /* Elimina la subrayado predeterminado del enlace */
+    transition: color 0.25s; /* Transición suave del color */
+    margin: 55px;
+
+    /* Efecto hover */
+    &:hover {
+        color: yellow; /* Cambia el color del texto al pasar el cursor sobre el enlace */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+#carouselExampleIndicators {
+    margin-top: 145px; /* Ajusta según sea necesario */
+}
+
+.img--bg-carousel {
+    display: block; /* Hace que el elemento sea un bloque, ocupando todo el ancho disponible */
+    position: absolute; /* Posiciona el elemento de forma absoluta con respecto a su primer padre posicionado */
+    inset: 0; /* Posiciona el elemento en los bordes del contenedor padre */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+}
+
+.card{
+    margin: 0px 15px 0 15px;
+}
+
+.card img {
+    width: 12rem; /* Ancho de la imagen */
+    height: 12rem; /* Altura de la imagen */
+}
+
+.card a{
+    text-decoration: none;
+}
+.card-body {
+    height: 10rem; /* Altura del contenedor del cuerpo de la tarjeta */
+    overflow: hidden; /* Oculta el contenido que desborda del contenedor */
+}
+
+.card-text {
+    font-size: 0.8rem; /* Tamaño de fuente del texto dentro de la tarjeta */
+}
+ 
+.btn {
+    color: white; /* Color del texto blanco */
+    background-color: red; /* Color de fondo rojo */
+    padding: 5px 25px; /* Espacio de relleno */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold; /* Grosor de la fuente */
+    text-align: center; /* Centra el texto dentro del botón */
+    display: block; /* Convertir en bloque para alinear horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+    /* Efecto hover */
+    &:hover {
+        color: white; /* Color del texto blanco al pasar el cursor sobre el botón */
+        background-color: red; /* Color de fondo rojo al pasar el cursor sobre el botón */
+    }
+}
+
+@media (max-width: 600px) {
+    .d-flex {
+        flex-direction:row;
+    }
+
+    .card {
+        width: 100%; /* Ajusta el ancho de las tarjetas en pantallas pequeñas */
+        height: 370px;
+        margin: 0;
+
+    }
+    
+    .card img{
+        width: 100%;
+    }
+
+    .card-title{
+        font-size: 0.8rem;
+    }
+
+    .card-text{
+        font-size: 0.7rem;
+    }
+    
+    .btn{
+        font-size: 0.6rem;
+    }
+}
+
+
+.head-categorias {
+    margin: 50px 0 0 0; /* Margen superior del encabezado de categorías */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del encabezado */
+}
+
+.card-categorias, .card-categorias2 {
+    display: flex; /* Usa un contenedor flexible para las tarjetas de categorías */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: flex-start; /* Centra las tarjetas verticalmente */
+    margin: 5px 5px 0 5px; /* Margen de las tarjetas de categorías */
+    gap: 6px; /* Espacio entre las tarjetas */
+}
+
+.card-categoria { 
+    width: 200px; /* Ancho de la tarjeta de categoría */
+    height: 320px; /* Altura de la tarjeta de categoría */
+    padding: 20px; /* Espacio de relleno dentro de la tarjeta */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    background:url("../img/Fondo2.png") no-repeat center center; /* Imagen de fondo centrada */
+    border-radius: 15px; /* Bordes redondeados */
+    position: relative; /* Posición relativa para posicionamiento de elementos secundarios */
+    margin: 15px; /* Margen exterior de la tarjeta */
+    overflow: hidden; /* Oculta el contenido que desborda de la tarjeta */
+}
+
+.image-container img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    max-height: 100%; /* Altura máxima de la imagen */
+}
+
+.boton-categorias{
+    position: absolute;
+    bottom: 20px; /* Distancia desde la parte inferior de la tarjeta */
+    left: 50%; /* Posición izquierda centrada */
+    transform: translateX(-50%); /* Centra horizontalmente el botón */
+    background-color: white; /* Color de fondo blanco */
+    padding: 5px 20px; /* Espacio de relleno */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold; /* Grosor de la fuente */
+}
+@media (max-width: 768px) {
+    .card-categorias, .card-categorias2 {
+        display: grid; /* Usa un contenedor de cuadrícula */
+        grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+        justify-items: center; /* Centra las tarjetas en la columna */
+        gap: 10px; /* Espacio entre las tarjetas */
+    }
+    
+    .card-categoria {
+        width: 100%; /* Ancho de la tarjeta para pantallas pequeñas */
+        height: 200px;
+        margin: 5px;
+    }
+
+    .boton-categorias {
+        bottom: 1px; /* Ajusta la distancia desde la parte inferior */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ancho máximo de la imagen */
+        max-height: 200px; /* Altura máxima de la imagen */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-categorias, .card-categorias2 {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+
+    .card-categoria {
+        width: 90%; /* Ancho de la tarjeta para pantallas muy pequeñas */
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+}
+
+.menu-bar {
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    max-width: 1400px; /* Ancho máximo */
+    min-width: 600px; /* Ancho mínimo */
+    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: #f0f0f0; /* Color de fondo de la barra */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    margin-top: 15px;
+}
+
+
+
+
+.label {
+    background-color: #d50000; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 20px 80px; /* Espaciado interno */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    font-size: 1.3rem; /* Tamaño de fuente */
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0% 100%); /* Forma de trapecio */
+}
+
+.bar {
+    flex-grow: 1; /* La barra crece para llenar el espacio disponible */
+    height: 60px; /* Altura de la barra */
+    background-color: #f0f0f0; /* Color de fondo de la barra */
+}
+
+.arrows {
+    display: flex; /* Utiliza flexbox para organizar las flechas */
+}
+
+.arrow {
+    width: 40px; /* Ancho de las flechas */
+    height: 40px; /* Altura de las flechas */
+    background-color: black; /* Color de fondo negro */
+    color: white; /* Color del texto blanco */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin: 0 15px 0 0px;
+}
+
+@media (max-width: 600px) {
+    .menu-bar {
+        align-items: center; /* Centra los elementos */
+    }
+
+    .label {
+        padding: 10px 5px;
+        font-size: 1rem;
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        text-align: center; /* Centra el texto */
+    }
+
+    .bar {
+        height: 30px; /* Ajustado el tamaño de la barra para móviles */
+        margin-bottom: 5px; /* Añadido margen inferior para separar la barra */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+    .arrows {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+.tamaño img {
+    width: 1400px; /* Mantiene el ancho original */
+    height: auto; /* Mantiene la altura original */
+    max-width: none; /* No se reduce a menos que se especifique */
+    max-height: none; /* No se reduce a menos que se especifique */
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .tamaño img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor en dispositivos móviles */
+        height: auto; /* Mantiene la altura proporcional */
+    }
+}
+
+
+
+
+footer {
+    background-color: #f9f9f9;
+    text-align: initial; 
+    margin-top: 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-head-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    
+}
+.footer-head {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+.footer-head img {
+    margin-top: 20px;
+    height: 90px;
+    width: 150px;
+}
+.footer-head h2 {
+    margin: 0;
+    margin: 0 20px 0 50px;
+    font-size: 14px;
+    
+}
+.footer-head input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 12px;
+    width: 300px;
+}
+.footer-head button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer-section {
+    margin: 20px 45px;
+}
+.footer-section h2 {
+    color: #ff0000;
+    margin-bottom: 25px;
+    font-size: 25px;
+
+}
+.footer-section p, .footer-section a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.footer-icons img {
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 13px;
+}
+.footer-icons {
+    display: flex;
+    align-items: center;
+}
+.footer-payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 150px;
+}
+.footer-payment-methods img {
+    height: 30px;
+    margin: 4px;
+    width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+        gap: 20px; /* Espacio entre elementos en dispositivos móviles */
+    }
+
+    .footer-head {
+        flex-direction: column; /* Apilar elementos en el encabezado */
+    }
+
+    .footer-head img {
+        margin-top: 10px; /* Reducir margen superior de la imagen */
+        width: 70%; /* Ancho máximo para la imagen */
+        max-width: 200px; /* Ancho máximo absoluto para la imagen */
+    }
+
+    .footer-head h2 {
+        font-size: 16px; /* Tamaño de fuente reducido */
+        margin: 10px 0; /* Márgenes ajustados */
+    }
+
+    .footer-head input {
+        width: 100%; /* Ancho completo para el campo de entrada */
+        max-width: 300px; /* Ancho máximo absoluto para el campo de entrada */
+    }
+
+    .footer-head button {
+        width: 100%; /* Ancho completo para el botón */
+        max-width: 150px; /* Ancho máximo absoluto para el botón */
+        margin-top: 10px; /* Espacio superior para separar el botón */
+    }
+
+    .footer-section {
+        margin: 10px; /* Márgenes internos reducidos para secciones */
+    }
+
+    .footer-section h2 {
+        font-size: 20px; /* Tamaño de fuente reducido */
+        margin-bottom: 15px; /* Espacio inferior ajustado */
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 14px; /* Tamaño de fuente reducido */
+    }
+
+    .footer-payment-methods img {
+        width: 25%; /* Ancho máximo para las imágenes */
+        max-width: 50px; /* Ancho máximo absoluto para las imágenes */
+    }
+}
+.imagen-fija {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+    background-color: transparent; /* Establece el fondo transparente */
+}
